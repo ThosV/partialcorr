@@ -35,5 +35,5 @@ def partialcorr(double[:] X, double[:] Y, double[:] Z):
     
     cdef double pcorr = pearsonr(residZX, residZY)[0]    
     
-    return pcorr
+    return (pcorr, residZX, residZY)
 
